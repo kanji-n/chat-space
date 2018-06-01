@@ -4,7 +4,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, unique: true, index: true|
+|name|string|null: false, unique: true, index: true|
 |email|string|null: false, unique: true|
 
 ### Association
@@ -17,7 +17,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, index: true|
+|name|string|null: false, index: true|
 
 ### Association
 - has_many :members
