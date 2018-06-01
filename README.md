@@ -9,6 +9,8 @@
 
 ### Association
 - has_many :members
+- has_many :groups, through: :members
+- has_many :messages
 
 
 ## groupsテーブル
@@ -19,6 +21,8 @@
 
 ### Association
 - has_many :members
+- has_many :users, through: :members
+- has_many :messages
 
 
 ## messagesテーブル
@@ -31,7 +35,8 @@
 |group_id|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :member
+- belongs_to :group
+- belongs_to :user
 
 
 ## membersテーブル(中間)
