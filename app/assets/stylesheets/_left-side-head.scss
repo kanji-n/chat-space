@@ -1,0 +1,21 @@
+.head-side{
+  width: 100%;
+  height: 100px;
+  background-color: #253141;
+  color: white;
+  &__username{
+    line-height: 100px;
+    padding-left: 10px;
+    float: left;
+  }
+  &__lists{
+    list-style: none;
+    line-height: 100px;
+    padding-right: 10px;
+    float: right;
+    &_icon{
+      padding-right: 5px;
+      float: left;
+    }
+  }
+}
