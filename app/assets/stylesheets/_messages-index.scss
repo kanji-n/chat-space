@@ -1,5 +1,15 @@
-.left-side{
-  width: 100px;
-  height: 100px;
+.contents{
+  width: 100vw;
+  height: 100vh;
   background-color: gray;
+    &__left-side{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+    &__messages{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
 }

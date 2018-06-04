@@ -1,5 +1,6 @@
-%div{class: "left-side"}
-  = render 'shared/left-side'
+%div{class: "contents"}
+  %div{class: "contents__left-side"}
+    = render 'shared/left-side'
 
-%div{class: "messages"}
-  = render 'shared/messages'
+  %div{class: "contents__messages"}
+    = render 'shared/messages'
