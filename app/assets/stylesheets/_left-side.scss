@@ -1,5 +1,17 @@
 .side{
-  width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100vh - 100px);
   color: white;
+}
+
+.side-lists{
+    &__list{
+      color: #FFFFFF;
+      padding: 20px 20px 0 20px;
+      &_group-name{
+        padding-bottom: 5px;
+      }
+      &_group-messages{
+        padding-bottom: 40px;
+      }
+    }
 }

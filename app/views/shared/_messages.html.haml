@@ -1,4 +1,17 @@
-%div{class: "head-messages"}
-  %p ヘッドメッセージ画面
 %div{class: "messages"}
-  %p メッセージ画面
+  %div{class: "messages__head"}
+    %div{class: "messages__head_group"}
+      %p{class: "messages__head_group_name"} テストグループ
+      %p{class: "messages__head_group_menbar-name"} Aさん、Bさん
+    %div{class: "messages__head_edit-button"}
+      %a{ href: 'http://google.co.jp', class: 'messages__head_edit-button_text' } Edit
+  %div{class: "messages__content"}
+    %div{class: "messages__content_lists"}
+      - for i in 1..3
+        = render 'shared/messages-lists'
+    %div{class: "messages__content_send-footer"}
+      %div{class: "messages__content_send-footer_input"}
+        %form{id: "form1", action: "#", class: "messages__content_send-footer_input_text"}
+          %input{type: "text", placeholder: "type a messages"}
+      %div{class: "messages__content_send-footer_button"}
+        %p send
