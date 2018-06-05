@@ -1,12 +1,14 @@
-%div{class: "side"}
-  %div{class: "head-side"}
+.side
+  .head-side
     %p{class: "head-side__username"}
       ユーザー名
     %ul{class: "head-side__lists"}
       %li{class: "head-side__lists_icon"}
-        %p icon
+        = link_to do
+          %i.fa.fa-edit{style: "color: #FFFFFF"}
       %li{class: "head-side__lists_icon"}
-        %p icon
-  %div{class: "side-lists"}
-  - for i in 1..3
-    = render 'shared/left-side-lists'
+        = link_to do
+          %i.fa.fa-cog{style: "color: #FFFFFF"}
+  .side-lists
+    - for i in 1..3
+      = render 'shared/left-side-lists'

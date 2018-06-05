@@ -35,33 +35,31 @@
       background-color: #DDDDDD;
       padding: 6px 40px 0 40px;
     }
-    &_send-footer{
+    &_msg-send-footer{
       height: 90px;
       background-color: #888888;
-      padding: 0 40px 0 40px;
-      &_input{
-        float: left;
+      padding: 0 40px;
+      position: relative;
+      &_input-text{
         height: 50px;
-        width: calc(100% - 125px);
-        &_text{
-          input{
-            height: 50px;
-            width: 100%;
-            margin: 20px 0;
-          }
+        width: calc(100% - 130px);
+        margin: 20px 0;
+      }
+      &_label{
+        font-size: 22px;
+        line-height: 90px;
+        position: absolute;
+        right: 180px;
+        &_file{
+          display: none;
         }
       }
-      &_button{
-        float: right;
+      &_submit-btm{
         height: 50px;
         width: 100px;
         background-color: #38aef0;
         margin: 20px 0;
-        p{
-          text-align: center;
-          line-height: 50px;
-          color: #ffffff;
-        }
+        float: right;
       }
     }
   }

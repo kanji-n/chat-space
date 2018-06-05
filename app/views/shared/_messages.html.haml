@@ -1,17 +1,18 @@
-%div{class: "messages"}
-  %div{class: "messages__head"}
-    %div{class: "messages__head_group"}
+.messages
+  .messages__head
+    .messages__head_group
       %p{class: "messages__head_group_name"} テストグループ
       %p{class: "messages__head_group_menbar-name"} Aさん、Bさん
-    %div{class: "messages__head_edit-button"}
-      %a{ href: 'http://google.co.jp', class: 'messages__head_edit-button_text' } Edit
-  %div{class: "messages__content"}
-    %div{class: "messages__content_lists"}
+    .messages__head_edit-button
+      %a{ href: '', class: 'messages__head_edit-button_text' } Edit
+  .messages__content
+    .messages__content_lists
       - for i in 1..3
         = render 'shared/messages-lists'
-    %div{class: "messages__content_send-footer"}
-      %div{class: "messages__content_send-footer_input"}
-        %form{id: "form1", action: "#", class: "messages__content_send-footer_input_text"}
-          %input{type: "text", placeholder: "type a messages"}
-      %div{class: "messages__content_send-footer_button"}
-        %p send
+    .messages__content_msg-send-footer
+      = form_for('', method: :post) do |f|
+        = f.text_field :body, placeholder: 'type a message', class: 'messages__content_msg-send-footer_input-text'
+        = f.label :image, class: 'messages__content_msg-send-footer_label' do
+          = fa_icon 'picture-o', class: 'messages__content_msg-send-footer_label_icon'
+          = f.file_field :image, class: 'messages__content_msg-send-footer_label_file'
+        = f.submit 'Send', class: 'messages__content_msg-send-footer_submit-btm'
