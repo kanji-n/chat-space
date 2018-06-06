@@ -1,0 +1,12 @@
+.side-lists{
+  &__list{
+    color: white;
+    padding: 20px 20px 0 20px;
+    &__group-name{
+      padding-bottom: 5px;
+    }
+    &__group-messages{
+      padding-bottom: 40px;
+    }
+  }
+}

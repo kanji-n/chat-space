@@ -1,0 +1,29 @@
+@import "./_variable.scss";
+.head-side{
+  height: 100px;
+  background-color: $color-dark3;
+  color: white;
+  padding: 0 20px 0 20px;
+  &__username{
+    line-height: 100px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    float: left;
+  }
+  &__lists{
+    list-style: none;
+    line-height: 100px;
+    float: right;
+    &__icon{
+      padding-left: 5px;
+      float: left;
+      .fa-edit{
+        color: white;
+      }
+      .fa-cog{
+        color: white;
+      }
+    }
+  }
+}
