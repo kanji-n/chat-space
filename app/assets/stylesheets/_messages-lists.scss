@@ -1,0 +1,19 @@
+.messages-list{
+  &__user-name{
+    padding-top: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $color-dark;
+    &_date{
+      font-size: 12px;
+      color: $color-gray;
+      margin-left: 10px;
+    }
+  }
+  &__messages{
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-dark;
+  }
+}
