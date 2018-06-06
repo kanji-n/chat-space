@@ -1,10 +1,10 @@
 .messages
   .messages__head
     .messages__head__group
-      %p{class: "messages__head__group__name"} テストグループ
-      %p{class: "messages__head__group__menbar-name"} Aさん、Bさん
+      %p.messages__head__group__name テストグループ
+      %p.messages__head__group__menbar-name Aさん、Bさん
     .messages__head__edit-button
-      %a{ href: '', class: 'messages__head__edit-button__text' } Edit
+      %a.messages__head__edit-button__text{href: ''} Edit
   .messages__content
     .messages__content__lists
       - for i in 1..3

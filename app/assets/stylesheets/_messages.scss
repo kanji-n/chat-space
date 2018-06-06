@@ -8,7 +8,7 @@
     height: 100px;
     background-color: white;
     border-color: $color-silver;
-    padding: 0 40px 0 40px;
+    padding: 0 40px 0;
     &__group{
       float: left;
       padding-top: 35px;
@@ -41,7 +41,7 @@
     &__lists{
       height: calc(100vh - 196px);
       background-color: rgb(250,250,250);
-      padding: 6px 40px 0 40px;
+      padding: 6px 40px 0;
     }
     &__msg-send-footer{
       height: 90px;
