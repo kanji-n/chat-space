@@ -6,4 +6,9 @@ class UsersController < ApplicationController
 
   def update
   end
+
+  private
+  def user_edit_params
+    params.permit(:name, :email)
+  end
 end
