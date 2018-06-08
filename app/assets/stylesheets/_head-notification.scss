@@ -1,7 +1,10 @@
 .head-notification{
-  height: 30px;
-  background-color: $color-skyblue;
+  color: $white;
   text-align: center;
-  line-height: 30px;
-  color: white;
+    &__alert{
+      background-color: red;
+    }
+    &__notice {
+      background-color: $color-skyblue;
+    }
 }
