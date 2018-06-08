@@ -1,0 +1,5 @@
+-# .head-notification
+-#   %p チャットグループが作成されました。
+
+- flash.each do |key, value|
+  = content_tag(:div, value, class: "head-notification__#{key}")

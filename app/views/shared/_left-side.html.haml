@@ -7,7 +7,7 @@
         = link_to do
           %i.fa.fa-edit
       %li.head-side__lists__icon
-        = link_to do
+        = link_to "users/#{current_user.id}/edit" do
           %i.fa.fa-cog
   .side-lists
     - for i in 1..3
