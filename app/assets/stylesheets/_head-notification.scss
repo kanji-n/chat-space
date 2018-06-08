@@ -1,10 +1,12 @@
 .head-notification{
-  color: $white;
-  text-align: center;
-    &__alert{
-      background-color: red;
-    }
-    &__notice {
-      background-color: $color-skyblue;
-    }
+  &__alert{
+    background-color: red;
+    text-align: center;
+    color: white;
+  }
+  &__notice {
+    background-color: $color-skyblue;
+    text-align: center;
+    color: white;
+  }
 }
