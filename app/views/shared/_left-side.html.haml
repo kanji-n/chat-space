@@ -4,11 +4,16 @@
       ユーザー名
     %ul.head-side__lists
       %li.head-side__lists__icon
-        = link_to do
+        = link_to new_group_path do
           %i.fa.fa-edit
       %li.head-side__lists__icon
         = link_to "users/#{current_user.id}/edit" do
           %i.fa.fa-cog
   .side-lists
-    - for i in 1..3
-      = render 'shared/left-side-lists'
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .side-lists__list
+          .list__group-name
+            = group.name
+          .list__group-messages
+            メッセージはまだありません。
