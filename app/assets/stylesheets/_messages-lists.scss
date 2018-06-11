@@ -16,4 +16,9 @@
     font-weight: bold;
     color: $color-dark;
   }
+  .messages-lists__images{
+    width: 500px;
+    height: 300px;
+    object-fit: contain;
+  }
 }
