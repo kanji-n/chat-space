@@ -10,4 +10,6 @@
         = link_to "users/#{current_user.id}/edit" do
           %i.fa.fa-cog
   .side-lists
-    = render 'shared/left-side-lists'
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        = render 'shared/left-side-lists', {group: group}
