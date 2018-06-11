@@ -1,7 +1,7 @@
 .side
   .head-side
     %p.head-side__username
-      ユーザー名
+      = current_user.name
     %ul.head-side__lists
       %li.head-side__lists__icon
         = link_to new_group_path do
@@ -10,6 +10,4 @@
         = link_to "users/#{current_user.id}/edit" do
           %i.fa.fa-cog
   .side-lists
-    - current_user.groups.each do |group|
-      = link_to group_messages_path(group) do
-        = render 'shared/left-side-lists', {group: group}
+    = render 'shared/left-side-lists'
