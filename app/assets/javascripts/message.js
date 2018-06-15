@@ -1,4 +1,8 @@
 $(function () {
+  /**
+  * メッセージのHTML(レスポンス)
+  * @type {json}
+  */
   function buildHTML(message) {
     var html = `<div class="messages-list">
                   <p class="messages-list__user-name">
