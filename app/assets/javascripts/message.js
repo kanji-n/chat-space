@@ -59,5 +59,9 @@ $(function () {
         formClear();
         scrollBottom('.messages__content__lists');
       })
+      .fail(function () {
+        formClear();
+        alert('メッセージを入力してください');
+      })
   });
 });
