@@ -14,7 +14,7 @@
     .messages__content__lists
       = render 'shared/messages-lists'
     .messages__content__msg-send-footer
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html: {id: 'send-messages'} do |f|
         = f.text_field :content, placeholder: 'type a message', class: 'messages__content__msg-send-footer__input-text'
         = f.label :image, class: 'messages__content__msg-send-footer__label' do
           = fa_icon 'picture-o', class: 'messages__content__msg-send-footer__label__icon'
