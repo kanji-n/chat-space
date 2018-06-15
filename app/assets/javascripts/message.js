@@ -34,6 +34,13 @@ $(function () {
     $('.messages__content__msg-send-footer__submit-btm').prop("disabled", false);
     $('.messages__content__msg-send-footer__label__file').val('');
   }
+  /**
+  * 一番下まで自動スクロール
+  * @type {string}
+  */
+  function scrollBottom(element) {
+    $(element).animate({ scrollTop: $(element)[0].scrollHeight }, 'fast');
+  }
   $('#send-messages').on('submit', function (e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -50,6 +57,7 @@ $(function () {
         var html = buildHTML(data);
         $('.messages__content__lists').append(html);
         formClear();
+        scrollBottom('.messages__content__lists');
       })
   });
 });
