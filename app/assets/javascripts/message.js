@@ -26,7 +26,7 @@ $(function () {
     if (img_url != null) {
       return image = `<img src="${img_url}" class="messages-lists__images">`;
     } else {
-      return image = ""
+      return image = "";
     }
   }
   /**
@@ -45,10 +45,10 @@ $(function () {
   function scrollBottom(element) {
     $(element).animate({ scrollTop: $(element)[0].scrollHeight }, 'fast');
   }
-  $('#send-messages').on('submit', function (e) {
+  $('form').on('submit', function (e) {
     e.preventDefault();
     var formData = new FormData(this);
-    var url = $(this).attr('action')
+    var url = $(this).attr('action');
     $.ajax({
       url: url,
       type: "POST",
@@ -66,6 +66,6 @@ $(function () {
       .fail(function () {
         formClear();
         alert('メッセージを入力してください');
-      })
+      });
   });
 });
