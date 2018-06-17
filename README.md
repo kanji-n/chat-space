@@ -29,7 +29,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|
+|content|text|
 |image|string|
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
@@ -39,7 +39,7 @@
 - belongs_to :user
 
 
-## membersテーブル(中間)
+## group_usersテーブル(中間テーブル)
 
 |Column|Type|Options|
 |------|----|-------|
