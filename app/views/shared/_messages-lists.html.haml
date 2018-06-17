@@ -3,7 +3,7 @@
     %p.messages-list__user-name
       = message.user.name
       %span.messages-list__user-name__date
-        = message.created_at.strftime("%Y/%m/%d %H:%M:%S")
+        = message.created_at.to_s()
     %p.messages-lists__messages
       = message.content if message.content.present?
     = image_tag message.image.url, class: 'messages-lists__images' if message.image.present?
