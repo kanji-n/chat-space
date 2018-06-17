@@ -34,9 +34,8 @@ $(function () {
   * @type {void}
   */
   function formClear() {
-    $('.messages__content__msg-send-footer__input-text').val('');
+    $('form')[0].reset();
     $('.messages__content__msg-send-footer__submit-btm').prop("disabled", false);
-    $('.messages__content__msg-send-footer__label__file').val('');
   }
   /**
   * 一番下まで自動スクロール
