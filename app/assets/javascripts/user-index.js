@@ -6,6 +6,14 @@ $(function () {
                 </div>`;
     $('#user-search-result').append(html);
   }
+  function appendMembar(id, name) {
+    var html = `<div class="chat-group-user clearfix js-chat-member" id="${id}">
+                  <input name="group[user_ids][]" type="hidden" value="${id}">
+                  <p class="chat-group-user__name">${name}</p>
+                  <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn">削除</a>
+                </div>`
+    $("#chat-group-users").append(html);
+  }
   function formClear() {
     $("#user-search-result").empty();
   }
@@ -32,5 +40,8 @@ $(function () {
   $("#user-search-result").on('click', '.user-search-add', function () {
     var id = $(this).data('user-id');
     var name = $(this).data('user-name');
+    appendMembar(id, name);
+    $(this).parent().remove();
+    $('#user-search-field').val('');
   });
 });
