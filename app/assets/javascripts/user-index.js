@@ -1,4 +1,8 @@
 $(function () {
+  /**
+  * ユーザー検索の結果のHTML(レスポンス)
+  * @type {json}
+  */
   function appendName(user) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${user.name}</p>
@@ -6,6 +10,10 @@ $(function () {
                 </div>`;
     $('#user-search-result').append(html);
   }
+  /**
+  * ユーザー検索の結果で選択したユーザーのHTML(レスポンス)
+  * @type {json}
+  */
   function appendMembar(id, name) {
     var html = `<div class="chat-group-user clearfix js-chat-member" id="${id}">
                   <input name="group[user_ids][]" type="hidden" value="${id}">
@@ -14,6 +22,10 @@ $(function () {
                 </div>`
     $("#chat-group-users").append(html);
   }
+  /**
+  * フォームの初期化
+  * @type {void}
+  */
   function formClear() {
     $("#user-search-result").empty();
   }
