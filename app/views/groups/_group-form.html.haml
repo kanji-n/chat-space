@@ -22,9 +22,9 @@
       %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
       #chat-group-users
-        - unless @membars.nil?
-          - @membars.each do |membar|
-            = render 'group-membar-list', {membar: membar}
+        - unless @members.nil?
+          - @members.each do |member|
+            = render 'group-member-list', {member: member}
         .chat-group-user.clearfix
           = f.hidden_field :user_ids, value: current_user.id, multiple: true
           %p.chat-group-user__name
