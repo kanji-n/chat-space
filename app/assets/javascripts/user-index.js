@@ -32,22 +32,24 @@ $(function () {
   $('#user-search-field').on("keyup", function () {
     formClear();
     var input = $(this).val();
-    $.ajax({
-      type: 'GET',
-      url: '/users',
-      data: { search_name: input },
-      dataType: 'json'
-    })
-      .done(function (users) {
-        if (users.length !== 0) {
-          users.forEach(function (user) {
-            appendName(user);
-          });
-        }
+    if (input != "") {
+      $.ajax({
+        type: 'GET',
+        url: '/users',
+        data: { search_name: input },
+        dataType: 'json'
       })
-      .fail(function () {
-        alert('ユーザー検索に失敗しました');
-      });
+        .done(function (users) {
+          if (users.length !== 0) {
+            users.forEach(function (user) {
+              appendName(user);
+            });
+          }
+        })
+        .fail(function () {
+          alert('ユーザー検索に失敗しました');
+        });
+    }
   });
   $("#user-search-result").on('click', '.user-search-add', function () {
     var id = $(this).data('user-id');
