@@ -6,10 +6,10 @@
       %p.messages__head__group__menbar-name
         Member：
         - @members.each do |member|
-          = member.user.name
-          、
+          = member.name
     .messages__head__edit-button
-      %a.messages__head__edit-button__text{href: ''} Edit
+      = link_to edit_group_path(@group), class: "messages__head__edit-button__text" do
+        Edit
   .messages__content
     .messages__content__lists
       = render 'shared/messages-lists'
