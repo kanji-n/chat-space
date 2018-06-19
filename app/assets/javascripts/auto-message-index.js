@@ -59,6 +59,7 @@ $(function () {
   * @type {void}
   */
   function updateMsg() {
+    var id = $(".messages-list").last().data('msg-id');
     $.ajax({
       type: 'GET',
       url: location.href,
@@ -69,6 +70,9 @@ $(function () {
         if (messages.length !== 0) {
           messages.forEach(function (message) {
             console.log(message.content);
+            var html = buildHTML(message);
+            $('.messages__content__lists').append(html);
+            scrollBottom('.messages__content__lists');
           });
         }
       })
