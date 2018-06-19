@@ -75,7 +75,6 @@ $(function () {
       .done(function (messages) {
         if (messages.length !== 0) {
           messages.forEach(function (message) {
-            console.log(message.content);
             var html = buildHTML(message);
             $('.messages__content__lists').append(html);
             scrollBottom('.messages__content__lists');
