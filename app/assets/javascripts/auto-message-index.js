@@ -1,8 +1,8 @@
 $(function () {
   var timer_message;
   // タイマー制御(メッセージを表示している時のみタイマー実行)
-  var isChatLength = document.getElementsByClassName("messages").length;
-  if (isChatLength > 0) {
+  var isMsgURL = location.href.match("\/groups\/\\d\/messages");
+  if (isMsgURL != null) {
     startTimer(5000);
   } else {
     stopTimer();
