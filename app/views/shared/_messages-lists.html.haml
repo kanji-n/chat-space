@@ -1,5 +1,5 @@
 - @messages.each do |message|
-  .messages-list
+  .messages-list{'data-msg-id': message.id}
     %p.messages-list__user-name
       = message.user.name
       %span.messages-list__user-name__date
