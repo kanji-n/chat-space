@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @messages = @group.messages.includes(:user)
     @members = @group.users
-    @new_messages = @messages.where('id > (?)', "#{params[:message_id]}")
+    @new_messages = @messages.where('id > ?', "#{params[:message_id]}")
 
     respond_to do |format|
       format.html
