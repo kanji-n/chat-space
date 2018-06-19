@@ -1,6 +1,12 @@
 $(function () {
   var timer_message;
-  startTimer(5000);
+  // タイマー制御(メッセージを表示している時のみタイマー実行)
+  var isChatLength = document.getElementsByClassName("messages").length;
+  if (isChatLength > 0) {
+    startTimer(5000);
+  } else {
+    stopTimer();
+  }
   /**
   * タイマースタート(メッセージ更新用)
   * @type {int} ミリ秒
