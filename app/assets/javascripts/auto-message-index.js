@@ -59,6 +59,21 @@ $(function () {
   * @type {void}
   */
   function updateMsg() {
-
+    $.ajax({
+      type: 'GET',
+      url: location.href,
+      data: { message_id: id },
+      dataType: 'json'
+    })
+      .done(function (messages) {
+        if (messages.length !== 0) {
+          messages.forEach(function (message) {
+            console.log(message.content);
+          });
+        }
+      })
+      .fail(function () {
+        alert('自動更新に失敗しました');
+      });
   }
 });
