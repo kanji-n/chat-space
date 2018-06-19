@@ -4,7 +4,7 @@ $(function () {
   * @type {json}
   */
   function buildHTML(message) {
-    var html = `<div class="messages-list">
+    var html = `<div class="messages-list" data-msg-id ="${message.id}" >
                   <p class="messages-list__user-name">
                     ${message.user_name}
                     <span class="messages-list__user-name__date">
