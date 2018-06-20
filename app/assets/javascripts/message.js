@@ -42,7 +42,7 @@ $(function () {
   * @type {string}
   */
   function scrollBottom(element) {
-    $(element).animate({ scrollTop: $(element)[0].scrollHeight }, 'fast');
+    $(element).animate({ scrollTop: $(element)[0].scrollHeight }, 0);
   }
   $('#new_message').on('submit', function (e) {
     e.preventDefault();
@@ -57,10 +57,12 @@ $(function () {
       contentType: false
     })
       .done(function (data) {
-        var html = buildHTML(data);
-        $('.messages__content__lists').append(html);
+        if (data.content != null || data.img_url != null) {
+          var html = buildHTML(data);
+          $('.messages__content__lists').append(html);
+          scrollBottom('.messages__content__lists');
+        }
         formClear();
-        scrollBottom('.messages__content__lists');
       })
       .fail(function () {
         formClear();
