@@ -57,10 +57,12 @@ $(function () {
       contentType: false
     })
       .done(function (data) {
-        var html = buildHTML(data);
-        $('.messages__content__lists').append(html);
+        if (data.content != null || data.img_url != null) {
+          var html = buildHTML(data);
+          $('.messages__content__lists').append(html);
+          scrollBottom('.messages__content__lists');
+        }
         formClear();
-        scrollBottom('.messages__content__lists');
       })
       .fail(function () {
         formClear();
