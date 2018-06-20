@@ -42,7 +42,7 @@ $(function () {
   * @type {string}
   */
   function scrollBottom(element) {
-    $(element).animate({ scrollTop: $(element)[0].scrollHeight }, 'fast');
+    $(element).animate({ scrollTop: $(element)[0].scrollHeight }, 0);
   }
   $('#new_message').on('submit', function (e) {
     e.preventDefault();
